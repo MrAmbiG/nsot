@@ -11,10 +11,9 @@ spec:
   type: {{ .Values.service.type }}
   ports:
     - port: {{ .Values.service.port }}
-      targetPort: http
+      targetPort: 8990
       protocol: TCP
-      name: http
-      nodePort: {{ .Values.service.nodePort }}
+      name: nsot
   selector:
     app.kubernetes.io/name: {{ include "nsot.name" . }}
     app.kubernetes.io/instance: {{ .Release.Name }}

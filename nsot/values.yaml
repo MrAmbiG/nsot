@@ -16,17 +16,15 @@ fullnameOverride: ""
 service:
   type: ClusterIP
   port: 8990
-  nodePort: 8990
 
 ingress:
   enabled: false
   annotations: {}
     # kubernetes.io/ingress.class: nginx
     # kubernetes.io/tls-acme: "true"
+  paths: []
   hosts:
-    - host: chart-example.local
-      paths: []
-
+    - chart-example.local
   tls: []
   #  - secretName: chart-example-tls
   #    hosts:
@@ -38,11 +36,11 @@ resources: {}
   # resources, such as Minikube. If you do want to specify resources, uncomment the following
   # lines, adjust them as necessary, and remove the curly braces after 'resources:'.
   # limits:
-  #   cpu: 100m
-  #   memory: 128Mi
+  #  cpu: 100m
+  #  memory: 128Mi
   # requests:
-  #   cpu: 100m
-  #   memory: 128Mi
+  #  cpu: 100m
+  #  memory: 128Mi
 
 nodeSelector: {}
 
