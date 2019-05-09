@@ -3,13 +3,14 @@ apiVersion: v1
 kind: Service
 metadata:
   name: nsot
+  labels:
+    app: nsot
   namespace: service
 spec:
-  selector:
-    matchLabels:
-      app: nsot
   ports:
   - name: nsot
     protocol: TCP
     port: 8990
     targetPort: 8990
+  selector:
+    app: nsot
