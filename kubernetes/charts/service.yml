@@ -1,0 +1,12 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: nsot
+spec:
+  selector:
+    app: nsot
+  ports:
+  - protocol: TCP
+    port: 8990
+    targetPort: 8990
