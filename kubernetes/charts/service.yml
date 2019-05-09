@@ -9,4 +9,4 @@ spec:
   ports:
   - protocol: TCP
     port: 8990
-    targetPort: 8990
+    targetPort: nsot

@@ -10,4 +10,5 @@ spec:
     - name: nsot
       image: docker.io/nsot/nsot:latest
       ports:
-        - containerPort: 8990
+        - name: nsot
+          containerPort: 8990
