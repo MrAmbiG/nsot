@@ -1,17 +1,14 @@
 ---
-apiVersion: apps/v1
-kind: Deployment
+apiVersion: v1
+kind: Pod
 metadata:
   name: nsot
   labels:
     app: nsot
 spec:
-  strategy:
-    type: Recreate
-  replicas: 1
   containers:
     - name: nsot
       image: docker.io/nsot/nsot:latest
       ports:
-        - name: nsot
-          containerPort: 8990
+        - containerPort: 8990
+        
