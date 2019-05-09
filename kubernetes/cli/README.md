@@ -9,3 +9,10 @@
  - `kubectl exec -it <nsot pod name> -- /bin/bash` to open an interactive shell
  - `nsot-server --config=/etc/nsot/nsot.conf.py createsuperuser` creates a super user.
     provide an email and password. The same can be now used to log into the nsot ipam.
+
+# Removing nsot
+Run the remove_nsot.sh or do the following
+- Remove nsot deployment
+    `kubectl delete deployment nsot`
+- Remove nsot service
+    `kubectl delete service nsot`
