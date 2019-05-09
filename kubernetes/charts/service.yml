@@ -10,3 +10,6 @@ spec:
   - protocol: TCP
     port: 8990
     targetPort: 8990
+    name: nsot
+  selector:
+    app: nsot
