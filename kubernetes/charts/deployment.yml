@@ -1,11 +1,14 @@
 ---
 apiVersion: v1
-kind: Pod
+kind: Deployment
 metadata:
   name: nsot
   labels:
     app: nsot
 spec:
+  strategy:
+    type: Recreate
+  replicas: 1
   containers:
     - name: nsot
       image: docker.io/nsot/nsot:latest
