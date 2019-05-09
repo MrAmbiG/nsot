@@ -6,6 +6,7 @@ spec:
   type: ClusterIP
   selector:
     app: nsot
+  type: NodePort
   ports:
   - protocol: TCP
     port: 8990
